@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inter, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(13, 13, 13);
+}
+
+@font-face {
+  font-family: inter;
+  src: url(./assets/INTER-REGULAR-SLNT=0.TTF);
+}
+
+/* ------------------------------------------------------------
+   Section Base + Animated Lines
+------------------------------------------------------------- */
+.section-after,
+.section-before {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* ✅ Base lines */
+.section-after::before,
+.section-after::after {
+  position: absolute;
+  left: -100vw;
+  width: 200vw;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  content: "";
+  z-index: 1;
+}
+
+.section-after::before {
+  top: 0;
+}
+
+.section-after::after {
+  bottom: 0;
+}
+
+/* ✅ Animated light streak (use separate pseudo-elements for clarity) */
+.section-after::before,
+.section-after::after {
+  --streak-width: 120px;
+  z-index: 2;
+}
+
+.section-after::before {
+  /* Add moving streak on top line */
+}
+.section-after::after {
+  /* Add moving streak on bottom line */
+}
+
+.section-after::before::before,
+.section-after::after ::after{
+  content: "";
+  position: absolute;
+  width: var(--streak-width);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: slideLight 20s linear infinite;
+}
+
+/* ✅ Animation keyframes */
+@keyframes slideLight {
+  0% {
+    transform: translateX(200vw);
+  }
+  100% {
+    transform: translateX(-200vw);
+  }
+}
+
+/* ✅ Hide on mobile */
+@media (max-width: 768px) {
+  .section-after::before,
+  .section-after::after,
+  .section-after::before::after,
+  .section-after::after::after {
+    display: none;
+  }
+}
