@@ -1,6 +1,7 @@
 import React from "react";
 
 import luffy from "./assets/luffy.jpg";
+import signature from "./assets/signature.svg"
 import Simply_meet from "./Components/AboutPage/Simply_meet";
 import GridParticles from "./Components/AboutPage/GridParticles";
 import Experience from "./Components/AboutPage/Experience";
@@ -8,7 +9,12 @@ import Experience from "./Components/AboutPage/Experience";
 const App = () => {
   return (
     <>
-      <div className="w-full h-[8vh] fixed top-0 z-20  border-b border-white/10 bg-zinc-950"></div>
+      <div className="w-full h-[8vh] fixed top-0 z-20  border-b border-white/10 bg-zinc-950 ">
+        <div className="w-full h-full relative text-white px-[2.5vw] flex items-center justify-between">
+          <h1 className="text-3xl tracking-tight">Sahil Saundale</h1>
+        
+        </div>
+      </div>
 
       <div className="max-w-screen overflow-x-hidden bg-zinc-950">
         <div className="grid min-h-dvh grid-cols-1 grid-rows-[1fr_1px_auto_1px_auto] justify-center [--gutter-width:--spacing(6)] sm:grid-cols-[var(--gutter-width)_minmax(0,var(--breakpoint-xl))_var(--gutter-width)] lg:[--gutter-width:--spacing(10)]">
@@ -16,7 +22,7 @@ const App = () => {
           <div className="w-full h-full relative ">
             <div className="w-full h-full   relative ">
               {/* upper free space */}
-              <div className=" w-full h-[20vh]   grid grid-cols-3 relative section-after gap-[50px]">
+              <div className=" w-full h-[20vh]   grid grid-cols-3 relative  gap-[50px]">
                 <div className="w-full h-full col-span-1 border-r border-white/10"></div>
                 <div className="w-full h-full col-span-1 border-l border-white/10"></div>
               </div>
@@ -42,7 +48,18 @@ const App = () => {
                           sizeScale={0.6}
                         />
                       </div>
-                      <div className="w-full h-[10vh] "></div>
+                      <div className="w-full h-[10vh] relative flex flex-col items-center justify-start !mt-20  text-white/50 ">
+                        <div className="w-[40 %] h-full  left-5 
+                          
+                        ">
+                          <h1 className="text-xs tracking-tight font-imb uppercase font-medium ">sahil saundale ,<br></br> user of Tailwind CSS</h1>
+                        <h1 className="text-xs tracking-tight font-imb uppercase font-medium"></h1>
+                        </div>
+                        {/* <h1>root</h1> */}
+                        <div className="absolute w-[10vw] h-full -top-[180%] left-10 -rotate-12 ">
+                          <img src={signature} alt="" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                   {/* <div className="w-px h-full bg-amber-300"></div> */}

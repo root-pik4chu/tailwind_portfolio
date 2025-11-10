@@ -22,7 +22,7 @@ const Simply_meet = () => {
           </div>
           <div className="w-full  flex items-end justify-center ">
             <div
-              className="w-full h-[10vh]  border-t border-b  border-white/10 flex items-center px-2 
+              className="w-full h-[10vh]  border-t border-b  border-white/10 flex items-center px-2 has-after-line
                           "
             >
               {/* try harder to find perfect spot */}
