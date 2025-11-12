@@ -8,10 +8,21 @@ import ProjectSection from "./Components/AboutPage/ProjectSection";
 import WhatIDo from "./Components/AboutPage/WhatIDo";
 import SnakeGame from "./Components/Game/snake/SnakeGame";
 import SnakeGame_1 from "./Components/Game/snake/SnakeGame_1";
+import useAnimatedFavicon from "./hooks/useAnimatedFavicon";
 // import TetrisGame from "./Components/Game/Tetris/TetrisGame";
 // import Tetrix_main from "./Components/Game/Tetris/Tetrix_main";
+// import frame0 from "./assets/favicon/frame_0.png"
 
 const App = () => {
+  useAnimatedFavicon([
+    "/frame_0.png",
+    "/frame_1.png",
+    "/frame_2.png",
+    "/frame_3.png",
+    "/frame_4.png"
+  ], 110);
+
+
   return (
     <>
       <div className="w-full h-[8vh] fixed top-0 z-20  border-b border-white/10 bg-zinc-950 ">
