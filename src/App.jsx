@@ -6,6 +6,9 @@ import Experience from "./Components/AboutPage/Experience";
 import ImageAndSignature from "./Components/AboutPage/LeftSideOfPage/ImageAndSignature";
 import ProjectSection from "./Components/AboutPage/ProjectSection";
 import WhatIDo from "./Components/AboutPage/WhatIDo";
+import SnakeGame from "./Components/Game/snake/SnakeGame";
+import SnakeGame_1 from "./Components/Game/snake/SnakeGame_1";
+// import TetrisGame from "./Components/Game/Tetris/TetrisGame";
 // import Tetrix_main from "./Components/Game/Tetris/Tetrix_main";
 
 const App = () => {
@@ -29,14 +32,14 @@ const App = () => {
                 <div className="w-full h-full col-span-1 border-l border-white/10"></div>
               </div>
 
-              <div className="w-full h-[500vh] relative">
+              <div className="w-full h-[350vh] relative">
                 {/* this is grid ...  */}
                 <div className="w-full h-full grid grid-cols-3 relative section-after gap-[50px] ">
                   {/* col 1 - left-side*/}
                   <div className="w-full h-full col-span-1 border-r border-white/10  relative section-right ">
                     <ImageAndSignature />
 
-                    <div className="w-full h-[77vh] bg-red-500"></div>
+                    <div className="w-full h-[77vh] "></div>
                   </div>
 
                   {/* col 2 - right-side*/}
@@ -53,14 +56,33 @@ const App = () => {
                     <WhatIDo />
 
                     {/* new divisio  */}
-                    <div className="text-white">lets connect</div>
+                    <div className="text-white"></div>
 
                     {/* new divisio  */}
-                    <div className="">
+                    <div className=" !mt-10">
                       {/* <Tetrix_main /> */}
+                      {/* <TetrisGame /> */}
+                      <div className="w-full ">
+                            <div className="text section-after !mt-15 text-white px-2 ">
+                              <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
+                                Snakes🐍
+                              </h1>
+                              
+                            </div>
+                          </div>
+                      <SnakeGame_1 />
                     </div>
 
                     {/* new divisio  */}
+                    {/* footer */}
+                    <div className="w-full h-[10vh] !mt-10">
+                      <div className="w-full h-full flex items-end justify-center text-white">
+                        <p>🍁🍁🍁</p>
+
+                        <p>Design inspired from Tailwind Css created by Sahil Saundale.</p>
+                        <p>🍁🍁🍁</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
