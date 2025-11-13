@@ -3,12 +3,13 @@ import React from "react";
 const Experience = () => {
   return (
     <div>
-      <div className="text section-after !mt-4 text-white px-2 ">
+      <div className="text section-after !mt-4 text-white p-2 ">
+        <p className=" tracking-widest uppercase text-pretty text-fuchsia-500 text-sm font-[ibm] font-semibold">Experience</p>
         <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
-          Experience
+          My Professional Journey
         </h1>
-        <p className="text-sm leading-relaxed text-white/50 ">
-          Experience that helped me grow as a frontend developer
+        <p className="text-xl leading-relaxed text-white/50 pt-5">
+          Experience that helped me evolve as a frontend developer — learning, building, and improving with every project.
         </p>
       </div>
       <div className="w-full h-[60vh] relative ">

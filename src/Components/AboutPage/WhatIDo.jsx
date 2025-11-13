@@ -5,18 +5,19 @@ export default function WhatIDo() {
     <div>
       <div className=" text-white">
                       <div className="w-full ">
-                        <div className="text has-before-line !mt-15 text-white px-2 ">
+                        <div className="text has-before-line !mt-15 text-white p-2 ">
+                          <p className=" tracking-widest uppercase text-pretty text-sky-500 text-sm font-[ibm] font-semibold">Craft</p>
                           <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
-                            What i do ...
+                            Design. Develop. Deliver.
                           </h1>
-                          <p className="text-lg leading-relaxed text-white !mt-10 section-after">
+                          <p className="text-lg leading-relaxed text-white !mt-5 section-after">
                             I am freelance{" "}
-                            <span className="text-pink-500">Frontend Dev</span>.
+                            <span className="text-sky-500">Frontend Dev</span>.
                             focused on many things like
                             DSA_,DEVELOPMENT_,DESIGN_ but Development is
                             something i do more compare to other ...Love to
                             create{" "}
-                            <span className="text-pink-500">
+                            <span className="text-sky-500">
                               Responsive and Visually appeling website
                             </span>
                             . Although i am still growing my professional

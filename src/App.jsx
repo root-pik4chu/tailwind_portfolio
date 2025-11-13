@@ -43,7 +43,7 @@ const App = () => {
                 <div className="w-full h-full col-span-1 border-l border-white/10"></div>
               </div>
 
-              <div className="w-full h-[350vh] relative">
+              <div className="w-full h-[500vh] relative">
                 {/* this is grid ...  */}
                 <div className="w-full h-full grid grid-cols-3 relative section-after gap-[50px] ">
                   {/* col 1 - left-side*/}
@@ -58,7 +58,40 @@ const App = () => {
                     <Simply_meet />
                     {/* new division */}
                     <Experience />
-
+                    {/* new division */}
+                    <div className="w-full  !mt-10 p-2 text-white section-after py-5">
+                      <p className=" tracking-widest uppercase text-pretty text-sky-500 text-sm font-[ibm] font-semibold">Toolkit</p>
+                      <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
+                  {"{ }"} Tech Stack
+        </h1>
+                    </div>
+                    <div className="w-full h-[50vh]  relative ">
+                        <div className="w-full h-full relative !mt-5 section-after">
+                          <div className="w-full h-full pointer-events-none absolute inset-0 z-20 grid grid-cols-3  gap-13 ">
+                            <div className="border-r border-white/10 z-20"></div>
+                            
+                            <div className="border-l border-r border-white/10 z-20"></div>
+                            <div className="border-l border-white/10 z-20"></div>
+                            
+                            
+                          </div>
+                          <div className="w-full h-full grid grid-cols-3 grid-rows-3 gap-13 text-white ">
+                              
+                                <div className=" flex-center"> root</div>
+                                <div className=" flex-center"> root</div>
+                                <div className="flex-center has-after-line bg-pink-500"> root</div>
+                                <div className="flex-center has-before-line"> root</div>
+                                <div className="flex-center bg-pink-400"> root</div>
+                                <div className="flex-center has-after-line "> root</div>
+                                <div className="flex-center has-before-line bg-pink-400"> root</div>
+                                <div className="flex-center "> root</div>
+                                <div className="flex-center "> root</div>
+                            
+                              
+                              
+                          </div>
+                        </div>
+                    </div>
                     {/* new divisio  */}
                     <ProjectSection />
 

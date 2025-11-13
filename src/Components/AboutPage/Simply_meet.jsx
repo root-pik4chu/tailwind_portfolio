@@ -6,16 +6,16 @@ const Simply_meet = () => {
       <div className=" w-full h-[60vh]   relative ">
         <div className="w-full h-[50vh] relative ">
           <div className=" w-full border-b border-white/10 p-2 max-md:px-4 relative flex flex-col ">
-            <p className="text-sm text-white/50 uppercase font-[inter] ">
+            <p className="text-sm text-sky-500 font-semibold uppercase font-[ibm] ">
               By the user of Tailwind CSS
             </p>
             <h1 className="mt-2 text-6xl tracking-tighter text-balance text-white md:text-7xl lg:text-8xl capitalize">
               simplicity meets precision.
             </h1>
-            <p className="text-sm text-white/50   font-[inter] ">
+            <p className="text-sm text-white/50 tracking-wider  font-[ibm] ">
               I skipped the name as the headline__
             </p>
-            <p className="text-sm text-white/50   font-[inter]">
+            <p className="text-sm text-white/50 tracking-wider  font-[ibm]">
               {" "}
               you already know me. The portfolio’s what matters.
             </p>

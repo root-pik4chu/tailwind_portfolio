@@ -4,13 +4,14 @@ export default function ProjectSection() {
   return (
     <div>
        <div className="w-full ">
-                            <div className="text section-after !mt-15 text-white px-2 ">
-                              <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
-                                Projects
+                            <div className="text section-after !mt-15 text-white py-5 ">
+                              <p className=" tracking-widest uppercase text-pretty text-pink-500 text-sm font-[ibm] font-semibold">Projects</p>
+                              <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0 ">
+                                Things I Build
                               </h1>
-                              <p className="text-sm leading-relaxed text-white/50">
-                                projects which i do in my freelance and its live ...
-                              </p>
+                                {/* <p className="text-xl leading-relaxed text-white/50 pt-5">
+                                
+                                </p> */}
                             </div>
                           </div>
       
