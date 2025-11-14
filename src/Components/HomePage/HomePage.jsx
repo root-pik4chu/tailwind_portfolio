@@ -16,7 +16,6 @@ export default function HomePage() {
       <div className="w-full h-full relative  ">
         <div className="w-full h-full   relative ">
           <div className="w-full h-full relative ">
-            
             {/* this is grid ...  */}
             <div className="w-full h-full grid grid-cols-3 relative section-after gap-[50px] ">
               {/* col 1 - left-side*/}
@@ -92,10 +91,22 @@ export default function HomePage() {
                     </div>
                   </div>
                   <SnakeGame_1 />
+
+                  {/* footer */}
+                  <div className="w-full h-full !mt-10">
+                    <div className="w-full h-full flex items-end justify-center text-white">
+                      <p>🍁🍁🍁</p>
+
+                      <p>
+                        Design inspired from Tailwind Css created by Sahil
+                        Saundale.
+                      </p>
+                      <p>🍁🍁🍁</p>
+                    </div>
+                  </div>
                 </div>
 
                 {/* new divisio  */}
-                {/* footer */}
               </div>
             </div>
           </div>

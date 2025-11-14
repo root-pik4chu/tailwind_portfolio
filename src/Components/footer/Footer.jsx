@@ -1,16 +1,17 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer() {
   return (
     <div>
-      <div className="w-full h-full !mt-10">
-                      <div className="w-full h-full flex items-end justify-center text-white">
-                        <p>🍁🍁🍁</p>
+      {/* footer */}
+                {/* <div className="w-full h-full !mt-10 absolute bottom-0">
+        <div className="w-full h-full flex items-end justify-center text-white">
+          <p>🍁🍁🍁</p>
 
-                        <p>Design inspired from Tailwind Css created by Sahil Saundale.</p>
-                        <p>🍁🍁🍁</p>
-                      </div>
-                    </div>
+          <p>this is diffrent footer hai na</p>
+          <p>🍁🍁🍁</p>
+        </div>
+      </div> */}
     </div>
-  )
+  );
 }

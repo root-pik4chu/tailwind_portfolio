@@ -11,6 +11,7 @@ export default function WrapperHome() {
               <div className="w-full h-full col-span-1 border-l border-white/10"></div>
             </div>
             <HomePage />
+            
       </div>
     </div>
   )
