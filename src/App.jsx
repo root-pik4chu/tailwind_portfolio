@@ -9,193 +9,47 @@ import WhatIDo from "./Components/AboutPage/WhatIDo";
 import SnakeGame from "./Components/Game/snake/SnakeGame";
 import SnakeGame_1 from "./Components/Game/snake/SnakeGame_1";
 import useAnimatedFavicon from "./hooks/useAnimatedFavicon";
+import NavBar from "./Components/NavBar/NavBar";
+import Footer from "./Components/footer/Footer";
+import HomePage from "./Components/HomePage/HomePage";
+import Experiment from "./Components/Experiment/Experiment";
+import WrapperHome from "./Components/HomePage/WrapperHome";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainLayout from "./Layout/MainLayout";
 // import TetrisGame from "./Components/Game/Tetris/TetrisGame";
 // import Tetrix_main from "./Components/Game/Tetris/Tetrix_main";
 // import frame0 from "./assets/favicon/frame_0.png"
 
-const App = () => {
-  useAnimatedFavicon([
-    "/frame_0.png",
-    "/frame_1.png",
-    "/frame_2.png",
-    "/frame_3.png",
-    "/frame_4.png"
-  ], 110);
+  const router = createBrowserRouter([{
+    element: <MainLayout />,
+    children:[
+      {path: "/", element: <WrapperHome />},
+      {path : "/experiment", element: <Experiment /> },
+    ],
+  }
+   
+  ])
 
-
-  return (
-    <>
-      <div className="w-full h-[8vh] fixed top-0 z-20  border-b border-white/10 bg-zinc-950 ">
-        <div className="w-full h-full relative text-white px-[2.5vw] flex items-center justify-between">
-          <h1 className="text-3xl tracking-tight">Sahil Saundale</h1>
-        </div>
-      </div>
-
-      <div className="max-w-screen overflow-x-hidden bg-zinc-950">
-        <div className="grid min-h-dvh grid-cols-1 grid-rows-[1fr_1px_auto_1px_auto] justify-center [--gutter-width:--spacing(6)] sm:grid-cols-[var(--gutter-width)_minmax(0,var(--breakpoint-xl))_var(--gutter-width)] lg:[--gutter-width:--spacing(10)]">
-          <div className="col-start-1 row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 sm:block dark:[--pattern-fg:var(--color-white)]/10"></div>
-
-          <div className="w-full h-full relative ">
-            <div className="w-full h-full   relative ">
-              {/* upper free space */}
-              <div className=" w-full h-[20vh]   grid grid-cols-3 relative  gap-[50px]">
-                <div className="w-full h-full col-span-1 border-r border-white/10"></div>
-                <div className="w-full h-full col-span-1 border-l border-white/10"></div>
-              </div>
-
-              <div className="w-full h-[500vh] relative">
-                {/* this is grid ...  */}
-                <div className="w-full h-full grid grid-cols-3 relative section-after gap-[50px] ">
-                  {/* col 1 - left-side*/}
-                  <div className="w-full h-full col-span-1 border-r border-white/10  relative section-right ">
-                    <ImageAndSignature />
-
-                    <div className="w-full h-[77vh] "></div>
-                  </div>
-
-                  {/* col 2 - right-side*/}
-                  <div className="w-full h-full col-span-2  border-l border-white/10 ">
-                    <Simply_meet />
-                    {/* new division */}
-                    <Experience />
-                    {/* new division */}
-                    <div className="w-full  !mt-10 p-2 text-white section-after py-5">
-                      <p className=" tracking-widest uppercase text-pretty text-sky-500 text-sm font-[ibm] font-semibold">Toolkit</p>
-                      <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
-                  {"{ }"} Tech Stack
-        </h1>
-                    </div>
-                    <div className="w-full h-[50vh]  relative ">
-                        <div className="w-full h-full relative !mt-5 section-after">
-                          <div className="w-full h-full pointer-events-none absolute inset-0 z-20 grid grid-cols-3  gap-13 ">
-                            <div className="border-r border-white/10 z-20"></div>
-                            
-                            <div className="border-l border-r border-white/10 z-20"></div>
-                            <div className="border-l border-white/10 z-20"></div>
-                            
-                            
-                          </div>
-                          <div className="w-full h-full grid grid-cols-3 grid-rows-3 gap-13 text-white ">
-                              
-                                <div className=" flex-center"> root</div>
-                                <div className=" flex-center"> root</div>
-                                <div className="flex-center has-after-line bg-pink-500"> root</div>
-                                <div className="flex-center has-before-line"> root</div>
-                                <div className="flex-center bg-pink-400"> root</div>
-                                <div className="flex-center has-after-line "> root</div>
-                                <div className="flex-center has-before-line bg-pink-400"> root</div>
-                                <div className="flex-center "> root</div>
-                                <div className="flex-center "> root</div>
-                            
-                              
-                              
-                          </div>
-                        </div>
-                    </div>
-                    {/* new divisio  */}
-                    <ProjectSection />
-
-                    {/* new divisio  */}
-
-                    <WhatIDo />
-
-                    {/* new divisio  */}
-                    <div className="text-white"></div>
-
-                    {/* new divisio  */}
-                    <div className=" !mt-10">
-                      {/* <Tetrix_main /> */}
-                      {/* <TetrisGame /> */}
-                      <div className="w-full ">
-                            <div className="text section-after !mt-15 text-white px-2 ">
-                              <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
-                                Snakes🐍
-                              </h1>
-                              
-                            </div>
-                          </div>
-                      <SnakeGame_1 />
-                    </div>
-
-                    {/* new divisio  */}
-                    {/* footer */}
-                    <div className="w-full h-[10vh] !mt-10">
-                      <div className="w-full h-full flex items-end justify-center text-white">
-                        <p>🍁🍁🍁</p>
-
-                        <p>Design inspired from Tailwind Css created by Sahil Saundale.</p>
-                        <p>🍁🍁🍁</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 sm:col-start-3 sm:block dark:[--pattern-fg:var(--color-white)]/10"></div>
-        </div>
-      </div>
-    </>
+export default function App() {
+  useAnimatedFavicon(
+    [
+      "/frame_0.png",
+      "/frame_1.png",
+      "/frame_2.png",
+      "/frame_3.png",
+      "/frame_4.png",
+    ],
+    110
   );
+
+
+
+
+  return <RouterProvider router={router} />
+  
+  
 };
 
-export default App;
-
-{
-  /* <div
-        className="w-full h-[10vh] fixed top-0 z-20  
-        border-b border-white/10 bg-zinc-950
-      "
-      ></div>
-      <div className="max-w-screen overflow-x-hidden bg-zinc-950">
-      
-      <div className="grid min-h-dvh grid-cols-1 grid-rows-[1fr_1px_auto_1px_auto] justify-center [--gutter-width:--spacing(6)] sm:grid-cols-[var(--gutter-width)_minmax(0,var(--breakpoint-xl))_var(--gutter-width)] lg:[--gutter-width:--spacing(10)]">
-
-        <div className="col-start-1 row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 sm:block dark:[--pattern-fg:var(--color-white)]/10"></div>
-       
-        <div className="">
-          
-        </div>
-       
-        <div className="row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 sm:col-start-3 sm:block dark:[--pattern-fg:var(--color-white)]/10"></div>
-      </div>
-    </div> */
-}
-
-// {/* First single column */}
-//               <div className="bg-red-900 text-white text-xl">
-//                 <div className="w-full h-[40vh] bg-zinc-300"></div>
-//               </div>
-
-//               {/* Gutter (keep empty) */}
-//               <div></div>
-
-//               {/* Div spanning next two content columns (including gutter between them) */}
-//               <div className="col-[3_/_span_3] grid grid-cols-2 gap-0">
-//                 <div className="bg-blue-900 flex items-center justify-center text-white text-xl">
-//                   Left
-//                 </div>
-//                 <div className="bg-green-900 flex items-center justify-center text-white text-xl">
-//                   Right
-//                 </div>
-//               </div>
-
-// -------------------------
-
-{
-  /* <div className="w-full h-full relative px-[2vw]">
-        <div className="nav w-full h-[10vh] bg-red-500 fixed top-0 z-20"></div>
-        <div className=" fixed right-0 col-start-1 row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 sm:block dark:[--pattern-fg:var(--color-white)]/10 w-[40px] h-screen"></div>
-        <div className="fixed left-0 col-start-1 row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 sm:block dark:[--pattern-fg:var(--color-white)]/10 w-[40px] h-screen"></div>
-        <div className=" w-full h-screen flex">
-
-    <div className="w-full h-[200vh] flex justify-center">
-        <div className="w-[calc(100vw-94px)] h-[100vh] bg-red-600">
-
-        </div>
-    </div>
+// export default App;
 
 
-        </div>
-      </div> */
-}
