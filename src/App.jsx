@@ -16,6 +16,8 @@ import Experiment from "./Components/Experiment/Experiment";
 import WrapperHome from "./Components/HomePage/WrapperHome";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./Layout/MainLayout";
+
+
 // import TetrisGame from "./Components/Game/Tetris/TetrisGame";
 // import Tetrix_main from "./Components/Game/Tetris/Tetrix_main";
 // import frame0 from "./assets/favicon/frame_0.png"
@@ -41,11 +43,16 @@ export default function App() {
     ],
     110
   );
+ 
 
 
 
-
-  return <RouterProvider router={router} />
+  return (
+    <>
+      
+      <RouterProvider router={router} />
+    </>
+  )
   
   
 };

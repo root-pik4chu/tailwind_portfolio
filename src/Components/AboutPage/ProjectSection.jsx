@@ -5,7 +5,7 @@ export default function ProjectSection() {
     <div>
        <div className="w-full ">
                             <div className="text section-after !mt-15 text-white py-5 ">
-                              <p className=" tracking-widest uppercase text-pretty text-pink-500 text-sm font-[ibm] font-semibold">Projects</p>
+                              <p className=" tracking-widest uppercase text-pretty text-pink-500 text-sm font-[ibm] font-semibold">L.I.V.E Projects</p>
                               <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0 ">
                                 Things I Build
                               </h1>
@@ -56,7 +56,9 @@ export default function ProjectSection() {
                         </div>
                       </section>
                     </div>
-
+                  <div className="w-30 h-10 p-2 bg-red-700 rounded-full !mt-5 flex items-center justify-center section-after">
+                    <p className=' text-sm font-semibold tracking-tight  text-white  ' >more Projects</p>
+                  </div>
     </div>
   )
 }
