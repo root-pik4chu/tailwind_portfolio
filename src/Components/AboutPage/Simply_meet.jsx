@@ -12,10 +12,10 @@ const Simply_meet = () => {
             <h1 className="mt-2 text-6xl tracking-tighter text-balance text-white md:text-7xl lg:text-8xl capitalize">
               simplicity meets precision.
             </h1>
-            <p className="text-sm text-white/50 tracking-wider  font-[ibm] ">
+            <p className="text-sm text-white/50 tracking-wider ">
               I skipped the name as the headline__
             </p>
-            <p className="text-sm text-white/50 tracking-wider  font-[ibm]">
+            <p className="text-sm text-white/50 tracking-wider ">
               {" "}
               you already know me. The portfolio’s what matters.
             </p>

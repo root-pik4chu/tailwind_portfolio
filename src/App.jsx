@@ -35,13 +35,13 @@ import MainLayout from "./Layout/MainLayout";
 export default function App() {
   useAnimatedFavicon(
     [
-      "/frame_0.png",
-      "/frame_1.png",
-      "/frame_2.png",
-      "/frame_3.png",
-      "/frame_4.png",
+      "/frame_0.jpg",
+      "/frame_1.jpg",
+      "/frame_2.jpg",
+      "/frame_3.jpg",
+      "/frame_4.jpg",
     ],
-    110
+    150
   );
  
 
