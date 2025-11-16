@@ -10,6 +10,7 @@ import ProjectSection from "../AboutPage/ProjectSection";
 import WhatIDo from "../AboutPage/WhatIDo";
 import SnakeGame_1 from "../Game/snake/SnakeGame_1";
 import TechStack from "../AboutPage/TechStack";
+import LeetCodeGraph from "../leetcodeGraph/LeetCodeGraph";
 // import useAnimatedFavicon from '../../hooks/useAnimatedFavicon';
 export default function HomePage() {
   return (
@@ -39,7 +40,7 @@ export default function HomePage() {
                 {/* new divisio  */}
 
                 <WhatIDo />
-
+                <LeetCodeGraph />
                 {/* new divisio  */}
                 <div className="text-white"></div>
 
@@ -48,7 +49,7 @@ export default function HomePage() {
                   {/* <Tetrix_main /> */}
                   {/* <TetrisGame /> */}
                   <div className="w-full ">
-                    <div className="text section-after !mt-15 text-white px-2 ">
+                    <div className="text section-after !mt-15 text-white p-2 ">
                       <p className=" tracking-widest uppercase text-pretty text-green-600 text-sm font-[ibm] font-semibold">
                         G.A.M.E.S
                       </p>

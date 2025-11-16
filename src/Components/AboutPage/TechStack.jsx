@@ -6,17 +6,30 @@ import motion from "../../assets/tech/motion.svg";
 import shadcnDark from "../../assets/tech/shadcn-ui_dark.svg";
 import shadcn from "../../assets/tech/shadcn-ui.svg";
 import vueuse from "../../assets/tech/vueuse.svg";
+import figma from "../../assets/tech/figma (2).svg";
+import tailwind from "../../assets/tech/tailwindcss-wordmark-dark.svg";
+import js from "../../assets/tech/javascript (2).svg";
+import gsap from "../../assets/tech/gsap-white.svg";
 
+// import { jsx } from "react/jsx-runtime";
+figma
+tailwind
+js
+gsap
 export default function TechStack() {
 
   const techStack = [
-  { name: "Framer Motion Dark", src: motionDark , class:"has-after-line " },
-  { name: "React Wordmark Dark", src: reactWordmarkDark , class: "has-before-line" },
-  { name: "React Router", src: reactRouter },
-  { name: "Framer Motion", src: motion , class:"has-after-line "},
-  { name: "shadcn/ui Dark", src: shadcnDark, class: "has-before-line" },
-  { name: "shadcn/ui", src: shadcn },
+  { name: "React Wordmark Dark", src: reactWordmarkDark ,  class:"has-after-line " },
+  { name: "GSAP", src: gsap ,  class: "has-before-line" },
+  { name: "JavaScript", src: js},
+  // { name: "Framer Motion", src: motion , class:"has-after-line "},
+  // { name: "shadcn/ui Dark", src: shadcnDark, class: "has-before-line" },
+  // { name: "shadcn/ui", src: shadcn },
   { name: "VueUse", src: vueuse ,class: "has-before-line"},
+  { name: "Figma", src: figma , class:"has-after-line " },
+  { name: "Tailwind CSS", src: tailwind , class: "has-before-line" },
+  { name: "React Router", src: reactRouter  },
+  { name: "Framer Motion Dark", src: motionDark , class: "has-before-line" },
 ];
 
   return (

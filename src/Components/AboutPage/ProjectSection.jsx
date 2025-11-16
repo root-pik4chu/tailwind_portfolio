@@ -1,5 +1,10 @@
 import React from 'react'
-
+import d1 from "../../assets/projectImage/d1.png"
+import d2 from "../../assets/projectImage/d2.png"
+import d3 from "../../assets/projectImage/d3.png"
+import i1 from "../../assets/projectImage/i1.png"
+import i2 from "../../assets/projectImage/i2.png"
+import i3 from "../../assets/projectImage/i3.png"
 export default function ProjectSection() {
   return (
     <div>
@@ -21,17 +26,17 @@ export default function ProjectSection() {
                           {/* <!-- Left Column --> */}
                           <div class="flex flex-col h-full gap-2">
                             {/* <!-- Top Section --> */}
-                            <div class="flex-1 bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70">
-                              <p>Left Top</p>
+                            <div class="flex-1 bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70 overflow-hidden">
+                              <img className='w-full h-full object-cover opacity-70' src={d1} alt="" />
                             </div>
                             {/* 
       <!-- Bottom Row (2 divisions) --> */}
                             <div class="grid grid-cols-2 gap-2 h-[30%]">
-                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70">
-                                <p>Bottom Left 1</p>
+                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70 overflow-hidden">
+                                <img className='w-full h-full object-cover opacity-90 scale-200' src={d2} alt="" />
                               </div>
-                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70">
-                                <p>Bottom Left 2</p>
+                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70 overflow-hidden">
+                                <img className='w-full h-full object-cover opacity-90 scale-200' src={d3} alt="" />
                               </div>
                             </div>
                           </div>
@@ -39,17 +44,17 @@ export default function ProjectSection() {
                           {/* <!-- Right Column --> */}
                           <div class="flex flex-col h-full gap-2">
                             {/* <!-- Top Section --> */}
-                            <div class="flex-1 bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70">
-                              <p>Right Top</p>
+                            <div class="flex-1 bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70 overflow-hidden">
+                              <img className='w-full h-full object-cover opacity-90 ' src={i1} alt="" />
                             </div>
 
                             {/* <!-- Bottom Row (2 divisions) --> */}
                             <div class="grid grid-cols-2 gap-2 h-[30%]">
-                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70">
-                                <p>Bottom Right 1</p>
+                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70 overflow-hidden">
+                                <img className='w-full h-full object-cover opacity-90 scale-150 ' src={i3} alt="" />
                               </div>
-                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70">
-                                <p>Bottom Right 2</p>
+                              <div class="bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-white/70 overflow-hidden">
+                                <img className='w-full h-full object-cover opacity-90 scale-100 ' src={i2} alt="" />
                               </div>
                             </div>
                           </div>
