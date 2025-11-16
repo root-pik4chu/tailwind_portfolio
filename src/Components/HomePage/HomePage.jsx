@@ -40,7 +40,7 @@ export default function HomePage() {
                 {/* new divisio  */}
 
                 <WhatIDo />
-                <LeetCodeGraph />
+                {/* <LeetCodeGraph /> */}
                 {/* new divisio  */}
                 <div className="text-white"></div>
 
