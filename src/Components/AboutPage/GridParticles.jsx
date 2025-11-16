@@ -416,7 +416,7 @@ export default function GridParticles({
   return (
     <div
       ref={containerRef}
-      className={className}
+      className={`${className} w-full h-full flex items-center justify-center`}
       style={{
         // Give it a size; parent can override via props
         width: '65%',

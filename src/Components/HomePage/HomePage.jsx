@@ -21,14 +21,18 @@ export default function HomePage() {
             {/* this is grid ...  */}
             <div className="w-full h-full grid grid-cols-3 relative section-after gap-[50px] ">
               {/* col 1 - left-side*/}
-              <div className="w-full h-full col-span-1 border-r border-white/10  relative section-right ">
+              <div className="w-full h-full sm:col-span-1 col-span-3 md:block  border-r border-white/10  relative section-right ">
                 <ImageAndSignature />
 
-                <div className="w-full h-[77vh] "></div>
+                <div className="w-full h-[77vh] hidden md:block "></div>
               </div>
 
               {/* col 2 - right-side*/}
-              <div className="w-full h-full col-span-2  border-l border-white/10 ">
+              <div className="w-full h-full sm:col-span-2 col-span-3 border-l border-white/10 ">
+                {/* <div className="md:hidden block w-1/2 h-[5] md:mb-10 ">
+                  <ImageAndSignature />
+                </div> */}
+
                 <Simply_meet />
                 {/* new division */}
                 <Experience />
