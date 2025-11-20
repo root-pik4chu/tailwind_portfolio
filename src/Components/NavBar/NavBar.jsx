@@ -1,7 +1,7 @@
 import React from 'react'
 import ganesha from '../../assets/tech/ganesha.png'
 import { Link } from 'react-router-dom'
-import Button_component from './Button_Component'
+import Button_component from './Button_Component.jsx'
 const NavBar = () => {
   const driveUrl = "https://drive.google.com/file/d/1JipHP6kzQyIFky1dLzUR_98BRb6DOHu0/view";
   return (
