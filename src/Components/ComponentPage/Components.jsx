@@ -1,6 +1,6 @@
 import React from "react";
 import Empty from "./Empty";
-import CodeBlock from "../../reusableComponents/Codeblock";
+import CodeBlock from "../../reusableComponents/CodeBlock";
 
 export default function Components() {
   return (
