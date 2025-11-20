@@ -12,12 +12,12 @@ export default function Components() {
               <h1 className="mt-2 text-6xl tracking-tighter text-balance text-white md:text-7xl lg:text-8xl capitalize">
               Ready to use React Components 
             </h1>
-            <h1 className="mt-2 text-2xl tracking-tighter text-balance text-white md:text-2xl lg:text-2xl capitalize">
+            <h1 className="mt-2 text-2xl tracking-tighter text-balance md:text-2xl lg:text-2xl capitalize text-amber-500" >
               just Copy and paste to your project
             </h1>
            </div>
           {/* GRID */}
-          <div className="grid grid-cols-4 gap-12 w-full !mt-20 section-after">
+          <div className="grid grid-cols-4 gap-12 w-full !mt-15 section-after">
             {/* BLOCK 1 */}
             <div className="w-full   h-80 border-white/10 border-r flex flex-col justify-between">
               <CodeBlock

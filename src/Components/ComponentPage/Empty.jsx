@@ -3,7 +3,7 @@ import React from 'react'
 export default function Empty() {
   return (
     <div>
-       <div className="w-full h-64 flex items-center justify-center bg-black ">
+       <div className="w-full h-64 flex items-center justify-center  ">
       <h1 className="group cursor-pointer text-[1.5vw] font-bold tracking-wide text-white overflow-hidden">
 
         {/* Wrapper */}
