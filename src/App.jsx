@@ -12,10 +12,16 @@ import useAnimatedFavicon from "./hooks/useAnimatedFavicon";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/footer/Footer";
 import HomePage from "./Components/HomePage/HomePage";
-import Experiment from "./Components/Experiment/Experiment";
+
 import WrapperHome from "./Components/HomePage/WrapperHome";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./Layout/MainLayout";
+import More_Projects from "./Components/MoreProjects/More_Projects";
+import Components from "./Components/ComponentPage/Components";
+// import Components from "./Components/Component/Components";
+
+
+
 
 
 // import TetrisGame from "./Components/Game/Tetris/TetrisGame";
@@ -26,7 +32,8 @@ import MainLayout from "./Layout/MainLayout";
     element: <MainLayout />,
     children:[
       {path: "/", element: <WrapperHome />},
-      {path : "/experiment", element: <Experiment /> },
+      {path : "/Components", element: <Components /> },
+      {path : "/More_Projects", element: <More_Projects /> },
     ],
   }
    

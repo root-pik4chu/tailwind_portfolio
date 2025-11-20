@@ -6,6 +6,8 @@ import i1 from "../../assets/projectImage/i1.png";
 import i2 from "../../assets/projectImage/i2.png";
 import i3 from "../../assets/projectImage/i3.png";
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
+
 export default function ProjectSection() {
   return (
     <div>
@@ -110,7 +112,7 @@ export default function ProjectSection() {
       </div>
       <div className="w-30 h-10 p-2 bg-red-700 rounded-full !mt-5 flex items-center justify-center section-after">
         <p className=" text-sm font-semibold tracking-tight  text-white  ">
-          more Projects
+          <Link to="/More_Projects">More_Projects</Link>
         </p>
       </div>
     </div>
