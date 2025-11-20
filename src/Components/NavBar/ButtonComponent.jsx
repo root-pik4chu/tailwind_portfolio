@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button_Component = () => {
+const ButtonComponent = () => {
   return (
     <>
       <style>{`
@@ -94,4 +94,4 @@ const Button_Component = () => {
   );
 };
 
-export default Button_Component;
+export default ButtonComponent;

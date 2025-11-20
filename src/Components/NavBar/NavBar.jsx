@@ -1,7 +1,7 @@
 import React from 'react'
 // import ganesha from '../../assets/tech/ganesha.png'
 import { Link } from 'react-router-dom'
-import Button_Component from './Button_Component'
+import ButtonComponent from './ButtonComponent'
 const NavBar = () => {
   const driveUrl = "https://drive.google.com/file/d/1JipHP6kzQyIFky1dLzUR_98BRb6DOHu0/view";
   return (
@@ -34,7 +34,7 @@ const NavBar = () => {
         rel="noopener noreferrer"
         className="inline-block"
       >
-        <Button_Component />
+        <ButtonComponent />
       </a>
     </div>
 
