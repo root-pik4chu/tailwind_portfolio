@@ -138,3 +138,17 @@ body {
     @apply flex items-center justify-center;
   }
 }
+
+
+
+
+
+.grid-overlay {
+  background-image:
+    /* vertical lines only */
+    linear-gradient(to right, rgba(231, 231, 231, 0.2) 1px, transparent 1px);
+    
+  /* width per column, full height */
+  background-size: calc(100% / 8) 100%;
+  /* background-color: rgba(81, 55, 55, 0.089); */
+}
