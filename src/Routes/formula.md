@@ -1,0 +1,27 @@
+| No. | Series Name                        | General Term (from k=1 to n)       | Closed-Form Sum Sₙ                                              | Remarks / Alternative Form                              |
+|-----|------------------------------------|------------------------------------|------------------------------------------------------------------|--------------------------------------------------------|
+| 1   | Natural Numbers                    | k                                  | n(n+1)/2                                                        |                                                        |
+| 2   | Sum of Squares                     | k²                                 | n(n+1)(2n+1)/6                                                  |                                                        |
+| 3   | Sum of Cubes                       | k³                                 | [n(n+1)/2]²                                                     | Perfect square                                         |
+| 4   | Sum of Fourth Powers               | k⁴                                 | n(n+1)(2n+1)(3n²+3n−1)/30                                       |                                                        |
+| 5   | Sum of Fifth Powers                | k⁵                                 | n²(n+1)²(2n²+2n−1)/12                                           |                                                        |
+| 6   | Sum of Sixth Powers                | k⁶                                 | n(n+1)(2n+1)(3n⁴+6n³−3n+1)/42                                   |                                                        |
+| 7   | First n Odd Numbers                | 2k−1                               | n²                                                              |                                                        |
+| 8   | First n Even Numbers               | 2k                                 | n(n+1)                                                          |                                                        |
+| 9   | Geometric Series                   | ar^{k−1}                           | a(1−rⁿ)/(1−r)  =  a(rⁿ−1)/(r−1)                                 | Both forms equivalent                                  |
+|10   | Infinite Geometric (|r|<1)          | ar^{k−1}                           | a/(1−r)                                                         |                                                        |
+|11   | Arithmetico-Geometric              | k r^k                              | r [1 − (n+1)rⁿ + n r^{n+1}] / (1−r)²                             | Common form                                            |
+|12   | Arithmetico-Geometric (alt)        | k r^{k−1}                          | [1 − (n+1)rⁿ + n r^{n+1}] / (1−r)²                               | Derivative of GP                                       |
+|13   | Sum of k² r^k                      | k² r^k                             | r(1+r)(1−(n+1)²rⁿ + (2n²+2n−1)r^{n+1} − n² r^{n+2}) / (1−r)³      |                                                        |
+|14   | Harmonic Series                    | 1/k                                | Hₙ = ln n + γ + 1/(2n) − … (no closed form)                     | Approximate                                            |
+|15   | Alternating Geometric              | (−1)^{k+1} ar^{k−1}                | a [1 − (−r)ⁿ] / (1 + r)                                         |                                                        |
+|16   | Sum of Binomial Coefficients       | C(n,k)                             | 2ⁿ                                                             | (1+1)ⁿ                                                  |
+|17   | Sum of k C(n,k)                    | k C(n,k)                           | n · 2^{n−1}                                                     |                                                        |
+|18   | Sum of k² C(n,k)                   | k² C(n,k)                          | n(n−1)2^{n−2} + n2^{n−1}                                        |                                                        |
+|19   | Sum of Triangular Numbers          | k(k+1)/2                           | n(n+1)(n+2)/6                                                   |                                                        |
+|20   | Sum of Squares of Triangular       | [k(k+1)/2]²                        | n(n+1)(n+2)(n+3)(3n²+3n−1)/120                                  |                                                        |
+|21   | p-Series (p=2)                     | 1/k²                               | π²/6 (only infinite)                                            | Basel problem                                          |
+|22   | p-Series (p=3)                     | 1/k³                               | ζ(3) (Apery's constant)                                         | No closed form known                                   |
+|23   | Exponential Series (partial)       | r^k / k!                           | (r^{n+1} − 1)/(r − 1)  if r≠1, else n+1                         | Finite part of e^x                                     |
+|24   | Sum of Divisors Function          | σ(k)                               | No simple closed form                                           | Number theoretic                                      |
+|25   | Sum of Fibonacci Numbers           | F_k                                | F_{n+2} − 1                                                     | Beautiful identity                                     |

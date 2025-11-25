@@ -7,7 +7,7 @@ const ButtonComponent = () => {
         .special-btn {
           position: relative;
           padding: 0.5vw 1vw;
-          font-size: 0.8vw;
+          font-size: 0.9vw;
           text-transform: uppercase;
          //  border: none;
           cursor: pointer;
