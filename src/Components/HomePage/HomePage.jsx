@@ -21,10 +21,14 @@ export default function HomePage() {
             {/* this is grid ...  */}
             <div className="w-full h-full grid grid-cols-3 relative section-after gap-[50px] ">
               {/* col 1 - left-side*/}
-              <div className="w-full h-full sm:col-span-1 col-span-3 md:block  border-r border-white/10  relative section-right ">
+              <div className="w-full h-[60vh] sm:col-span-1 col-span-3 md:block  border-r border-white/10  relative section-right ">
                 <ImageAndSignature />
 
-                <div className="w-full h-[77vh] hidden md:block "></div>
+                <div className="w-full h-[28vh] hidden md:block">
+                  {/* <div className="w-full h-[10vh]  ">
+                    <button className="bg-amber-700 px-4 py-1 rounded-2xl font- text-white">linkedIn</button>
+                  </div> */}
+                </div>
               </div>
 
               {/* col 2 - right-side*/}

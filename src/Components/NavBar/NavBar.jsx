@@ -2,6 +2,7 @@ import React from "react";
 // import ganesha from '../../assets/tech/ganesha.png'
 import { Link } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
+import ConnectButton from "./ConnectButton";
 const NavBar = () => {
   const driveUrl =
     "https://drive.google.com/file/d/1JipHP6kzQyIFky1dLzUR_98BRb6DOHu0/view";
@@ -29,6 +30,7 @@ const NavBar = () => {
           <Link to="/Components">Components</Link>
           <Link to="/More_Projects">more_Projects</Link>
           <a href={codepenUrl}>Codepen</a>
+          <div className=""><ConnectButton /> </div>
          </div>
 
           {/* <h1>Experiments</h1> */}

@@ -88,7 +88,7 @@ const ButtonComponent = () => {
             </span>
           ))}
         </span>
-        <span>Resume</span>
+        <span className="font-semibold">Resume</span>
       </button>
     </>
   );
