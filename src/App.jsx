@@ -20,24 +20,20 @@ import More_Projects from "./Components/MoreProjects/More_Projects";
 import Components from "./Components/ComponentPage/Components";
 // import Components from "./Components/Component/Components";
 
-
-
-
-
 // import TetrisGame from "./Components/Game/Tetris/TetrisGame";
 // import Tetrix_main from "./Components/Game/Tetris/Tetrix_main";
 // import frame0 from "./assets/favicon/frame_0.png"
 
-  const router = createBrowserRouter([{
+const router = createBrowserRouter([
+  {
     element: <MainLayout />,
-    children:[
-      {path: "/", element: <WrapperHome />},
-      {path : "/Components", element: <Components /> },
-      {path : "/More_Projects", element: <More_Projects /> },
+    children: [
+      { path: "/", element: <WrapperHome /> },
+      { path: "/Components", element: <Components /> },
+      { path: "/More_Projects", element: <More_Projects /> },
     ],
-  }
-   
-  ])
+  },
+]);
 
 export default function App() {
   useAnimatedFavicon(
@@ -50,20 +46,12 @@ export default function App() {
     ],
     150
   );
- 
-
-
 
   return (
     <>
-      
       <RouterProvider router={router} />
     </>
-  )
-  
-  
-};
+  );
+}
 
 // export default App;
-
-

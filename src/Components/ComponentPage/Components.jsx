@@ -1,26 +1,78 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Empty from "./Empty";
 import CodeBlock from "../../reusableComponents/CodeBlock";
+import FollowCursorCard from "./FollowCursorCard";
+import Division from "./Division";
+import ProjectDivision from "./ProjectDivision";
 
 export default function Components() {
   return (
     <div>
-      <div className="w-full h-[200vh] relative">
-       
+      <div className="w-full h-[400vh] relative">
         <div className="w-full h-full !mt-20 text-white">
-           <div className="w-full   section-after">
-              <h1 className="mt-2 text-6xl tracking-tighter text-balance text-white md:text-7xl lg:text-8xl capitalize">
-              Ready to use React Components 
+
+          <div className="w-full ">
+            <div className="w-full   section-after">
+            <h1 className="mt-2 text-6xl tracking-tighter text-balance text-white md:text-7xl lg:text-8xl capitalize">
+              Experiments
             </h1>
-            <h1 className="mt-2 text-2xl tracking-tighter text-balance md:text-2xl lg:text-2xl capitalize text-amber-500" >
-              just Copy and paste to your project
+            <h1 className="mt-2 text-2xl tracking-tighter text-balance md:text-2xl lg:text-2xl capitalize text-amber-500">
+              time saving things for developers || things like boiler plate
             </h1>
-           </div>
+          </div>
           {/* GRID */}
-          <div className="grid grid-cols-4 gap-12 w-full !mt-15 section-after">
+          <div className="grid md:grid-cols-4 row-auto grid-cols-1 gap-12 w-full !mt-15 section-after">
             {/* BLOCK 1 */}
             <div className="w-full   h-80 border-white/10 border-r flex flex-col justify-between">
-              <CodeBlock
+              <Division />
+            </div>
+
+            {/* OTHERS */}
+            <div className="w-full   h-80  border-white/10 border-r border-l flex flex-col justify-between relative "></div>
+            <div className="w-full   h-80 border-white/10 border-r border-l flex flex-col justify-between"></div>
+            <div className="w-full   h-80 border-white/10 border-l flex flex-col justify-between"></div>
+          </div>
+
+
+
+          <div className="w-full   section-after">
+            <h1 className="mt-2 text-6xl tracking-tighter text-balance text-white md:text-7xl lg:text-8xl capitalize">
+              More Projects
+            </h1>
+            <h1 className="mt-2 text-2xl tracking-tighter text-balance md:text-2xl lg:text-2xl capitalize text-sky-500">
+              Recent builds and experiments.
+            </h1>
+          </div>
+          <div className="grid md:grid-cols-2 row-auto grid-cols-1 gap-12 w-full !mt-15 section-after">
+            {/* BLOCK 1 */}
+            <div className="w-full   h-[70vh] border-white/10 border-r flex flex-col justify-between relative">
+              
+                <ProjectDivision />
+              
+            </div>
+
+            {/* OTHERS */}
+            <div className="w-full   h-[70vh]  border-white/10 border-r border-l flex flex-col justify-between relative "></div>
+            
+          </div>
+
+          </div>
+
+       
+            
+         
+
+
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// .............
+{
+  /* <CodeBlock
                 codeString={`import React from 'react'
     
 export default function Empty() {
@@ -48,16 +100,6 @@ export default function Empty() {
               </CodeBlock>
               <div className="w-full h-12  has-before-line">
                 <h2 className="text-xl capitalize tracking-tight font-medium p-2">hide and seek </h2>
-              </div>
-            </div>
-
-            {/* OTHERS */}
-            <div className="w-full   h-80 border-white/10 border-r border-l flex flex-col justify-between"></div>
-            <div className="w-full   h-80 border-white/10 border-r border-l flex flex-col justify-between"></div>
-            <div className="w-full   h-80 border-white/10 border-l flex flex-col justify-between"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+              </div> */
 }
+// ..................
