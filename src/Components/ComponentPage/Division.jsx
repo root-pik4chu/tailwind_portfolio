@@ -18,7 +18,7 @@ export default function Division() {
 
                <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-red-600 rounded-md text-xs hover:bg-red-700'>Live Link {"->"}</a>
             </div>
-            <div className="w-full h-[20%] has-before-line py-2">
+            <div className="w-full h-[20%] has-before-line has-after-line py-2">
                <p className='leading-none'>this is line for the information purpose </p>
             </div>
          </div>

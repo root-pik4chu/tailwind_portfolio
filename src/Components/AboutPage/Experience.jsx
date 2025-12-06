@@ -41,7 +41,7 @@ const Experience = () => {
 
   return (
     <div>
-      <div className="text section-after !mt-4 text-white p-2 ">
+      <div className="text section-after text-white p-2 ">
         <p className=" tracking-widest uppercase text-pretty text-fuchsia-500 text-sm font-[ibm] font-semibold">
           Experience
         </p>

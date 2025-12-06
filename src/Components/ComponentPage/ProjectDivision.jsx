@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProjectDivision() {
+export default function ProjectDivision( { codepen, github, liveLink } ) {
   return (
     <div>
       <div className="w-full h-[70vh] relative ">
@@ -12,11 +12,17 @@ export default function ProjectDivision() {
             </div>
             <div className="w-full h-20% flex gap-2 py-2 has-before-line">
                
-               <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-amber-700 hover:bg-amber-600 rounded-md text-xs'>codepen</a>
+               {
+                  codepen && <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-amber-700 hover:bg-amber-600 rounded-md text-xs'>codepen</a>
+               }
 
-               <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-blue-800 hover:bg-blue-700 rounded-md text-xs'>Github</a>
+               {
+                  github && <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-blue-800 hover:bg-blue-700 rounded-md text-xs'>Github</a>
+               }
 
-               <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-red-600 rounded-md text-xs hover:bg-red-700'>Live Link {"->"}</a>
+               {
+                  liveLink && <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-red-600 rounded-md text-xs hover:bg-red-700'>Live Link {"->"}</a>
+               }
             </div>
             <div className="w-full h-[20%] has-before-line py-2">
                <p className='leading-none'>this is line for the information purpose </p>

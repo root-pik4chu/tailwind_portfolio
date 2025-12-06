@@ -4,11 +4,13 @@ import CodeBlock from "../../reusableComponents/CodeBlock";
 import FollowCursorCard from "./FollowCursorCard";
 import Division from "./Division";
 import ProjectDivision from "./ProjectDivision";
+import ProjectDivisionGrid from "./ProjectDivisionGrid";
+import Footer from "../footer/Footer";
 
 export default function Components() {
   return (
     <div>
-      <div className="w-full h-[400vh] relative">
+      <div className="w-full overflow-hidden relative">
         <div className="w-full h-full !mt-20 text-white">
 
           <div className="w-full ">
@@ -33,28 +35,9 @@ export default function Components() {
             <div className="w-full   h-80 border-white/10 border-l flex flex-col justify-between"></div>
           </div>
 
+            <ProjectDivisionGrid  />
 
-
-          <div className="w-full   section-after">
-            <h1 className="mt-2 text-6xl tracking-tighter text-balance text-white md:text-7xl lg:text-8xl capitalize">
-              More Projects
-            </h1>
-            <h1 className="mt-2 text-2xl tracking-tighter text-balance md:text-2xl lg:text-2xl capitalize text-sky-500">
-              Recent builds and experiments.
-            </h1>
-          </div>
-          <div className="grid md:grid-cols-2 row-auto grid-cols-1 gap-12 w-full !mt-15 section-after">
-            {/* BLOCK 1 */}
-            <div className="w-full   h-[70vh] border-white/10 border-r flex flex-col justify-between relative">
-              
-                <ProjectDivision />
-              
-            </div>
-
-            {/* OTHERS */}
-            <div className="w-full   h-[70vh]  border-white/10 border-r border-l flex flex-col justify-between relative "></div>
-            
-          </div>
+            {/* <Footer /> */}
 
           </div>
 
