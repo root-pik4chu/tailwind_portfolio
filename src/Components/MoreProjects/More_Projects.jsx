@@ -9,7 +9,7 @@ const More_Projects = () => {
     <div>
       <div className="w-full text-white overflow-hidden">
         
-        <div className="w-full h-full !mt-20">
+        <div className="w-full h-full !mt-20 ">
            <ProjectDivisionGrid  />
         </div>
 

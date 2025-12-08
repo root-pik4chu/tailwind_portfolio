@@ -100,7 +100,7 @@ export default function ProjectDivisionGrid() {
           Recent builds and experiments.
         </h1>
       </div>
-      <div className="grid md:grid-cols-2 row-auto grid-cols-1 gap-x-12 w-full  !mt-10 ">
+      <div className="grid md:grid-cols-2 row-auto grid-cols-1 gap-x-12 w-full  !mt-10 has-before-line">
         {/* BLOCK 1 */}
         {projects.map((project
         ) => {
