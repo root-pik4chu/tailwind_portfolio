@@ -1,27 +1,27 @@
 import React from 'react'
 
-export default function ProjectDivision( { codepen, github, liveLink } ) {
+export default function ProjectDivision( { codepen, github, liveLink , imageLink } ) {
   return (
     <div>
       <div className="w-full h-[70vh] relative ">
          <div className="w-full h-full relative  px-2">
             <div className="w-full h-[80%] relative py-2 ">
                <div className="w-full h-full relative rounded-md overflow-hidden">
-                  <img className='w-full h-full object-cover  ' src="https://images.unsplash.com/photo-1515519128511-cbd81859fa91?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                  <img className='w-full h-full object-cover  ' src={imageLink} alt="" />
                </div>
             </div>
             <div className="w-full h-20% flex gap-2 py-2 has-before-line">
                
                {
-                  codepen && <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-amber-700 hover:bg-amber-600 rounded-md text-xs'>codepen</a>
+                  codepen && <a href={codepen} target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-amber-700 hover:bg-amber-600 rounded-md text-xs'>codepen</a>
                }
 
                {
-                  github && <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-blue-800 hover:bg-blue-700 rounded-md text-xs'>Github</a>
+                  github && <a href={github} target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-blue-800 hover:bg-blue-700 rounded-md text-xs'>Github</a>
                }
 
                {
-                  liveLink && <a href="http://google.com" target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-red-600 rounded-md text-xs hover:bg-red-700'>Live Link {"->"}</a>
+                  liveLink && <a href={liveLink} target="_blank" rel="noopener noreferrer" className='w-fit h-fit px-2 py-1 bg-red-600 rounded-md text-xs hover:bg-red-700'>Live Link {"->"}</a>
                }
             </div>
             <div className="w-full h-[20%] has-before-line py-2">

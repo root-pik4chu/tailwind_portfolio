@@ -1,26 +1,16 @@
 import React from 'react'
+import ProjectDivisionGrid from '../ComponentPage/ProjectDivisionGrid';
 
 const More_Projects = () => {
 
-  const projectBlocks = [
-    { className: "col-span-4 h-[50vh] bg-red-500" },
-    { className: "col-span-5 h-[50vh] bg-red-500" },
-    { className: "col-span-2 col-start-7 h-[50vh] bg-red-800" },
-    { className: "col-span-3  h-[50vh] bg-red-800" }
-  ];
+
 
   return (
     <div>
-      <div className="w-full text-white overflow-y-hidden">
+      <div className="w-full text-white overflow-hidden">
         
-        <div className="w-full h-full grid grid-cols-8 grid-rows-[repeat(3,auto)] grid-overlay !mt-10 gap-y-20">
-          
-          {projectBlocks.map((item, index) => (
-            <div key={index} className={item.className}>
-              
-            </div>
-          ))}
-
+        <div className="w-full h-full !mt-20">
+           <ProjectDivisionGrid  />
         </div>
 
       </div>

@@ -35,7 +35,7 @@ export default function Components() {
             <div className="w-full   h-80 border-white/10 border-l flex flex-col justify-between"></div>
           </div>
 
-            <ProjectDivisionGrid  />
+            
 
             {/* <Footer /> */}
 

@@ -21,8 +21,8 @@ export default function HomePage() {
             {/* this is grid ...  */}
             <div className="w-full h-full grid grid-cols-3 relative section-after gap-[50px]">
               {/* col 1 - left-side*/}
-              <div className="w-full h-full border-r border-white/10 ">
-                <div className="w-full h-[60vh] sm:col-span-1 col-span-3 md:block    relative section-right  ">
+              <div className="w-full h-full border-r border-white/10 sm:col-span-1 col-span-3 md:block">
+                <div className="w-full h-[60vh]     relative section-right  ">
                 <ImageAndSignature />
 
                 <div className="w-full h-[28vh] hidden md:block">
