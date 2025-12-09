@@ -4,6 +4,7 @@ import NavBar from "../Components/NavBar/NavBar";
 import Footer from "../Components/footer/Footer";
 import { ReactLenis, useLenis } from "lenis/react";
 import { AnimatePresence, motion } from "framer-motion";
+import DrawingCursor from "../Components/HoverPen/DrawingCursor";
 export default function MainLayout() {
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -34,6 +35,7 @@ export default function MainLayout() {
               exit={{ opacity: 0 }}
                transition={{ duration: 0.6, ease: "easeInOut" }}
             >
+              <DrawingCursor />
               <Outlet />
             </motion.div>
           </animatePresence>
