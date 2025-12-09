@@ -40,6 +40,7 @@ export default function ProjectSection() {
                     className="w-full h-full flex items-center justify-center font-bold text-black"
                   >
                     <MdArrowOutward />
+                    {/* link */}
                   </a>
                 </div>
                 <img
