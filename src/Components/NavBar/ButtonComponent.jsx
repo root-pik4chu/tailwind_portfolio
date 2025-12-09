@@ -15,6 +15,12 @@ const ButtonComponent = () => {
          //  color: color-mix(in oklch, canvasText, #0000 25%);
           transition: background 0.26s ease-out, color 0.26s ease-out;
         }
+        @media (max-width: 768px) {
+          .special-btn {
+            padding: 2vw 4vw;
+            font-size: 2.7vw;
+          }
+        }
 
         .special-btn:focus-visible {
           outline: color-mix(in oklch, canvasText, #0000) dashed 1px;

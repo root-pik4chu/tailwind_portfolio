@@ -4,12 +4,11 @@ import ProjectDivisionGrid from '../ComponentPage/ProjectDivisionGrid';
 const More_Projects = () => {
 
 
-
   return (
     <div>
       <div className="w-full text-white overflow-hidden">
         
-        <div className="w-full h-full !mt-20 ">
+        <div className="w-full h-full  !mt-20 ">
            <ProjectDivisionGrid  />
         </div>
 

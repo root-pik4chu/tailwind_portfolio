@@ -25,7 +25,7 @@ export default function ProjectSection() {
         </div>
       </div>
 
-      <div className="w-full h-[60vh] relative bg-zinc-900 !mt-10 section-after">
+      <div className="w-full md:h-[60vh] h-full bg-zinc-900 relative  !mt-10 section-after">
         <section class="w-full h-full relative mx-auto px-2 py-2">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2 h-full ">
             {/* <!-- Left Column --> */}
