@@ -53,7 +53,7 @@ const Experience = () => {
           building, and improving with every project.
         </p>
       </div>
-      <div className="w-full h-[30vh] relative ">
+      <div className="w-full md:h-[30vh] h-full relative ">
         {/* CARDS EXPERIENCE SECTION  */}
         <div className="w-full h-full relative  !mt-10 ">
           <section class="w-full h-full max-w-5xl   mx-auto relative section-after ">
