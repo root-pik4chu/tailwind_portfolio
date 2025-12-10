@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {} from "react";
 import Empty from "./Empty";
 import CodeBlock from "../../reusableComponents/CodeBlock";
 import FollowCursorCard from "./FollowCursorCard";
@@ -6,8 +6,117 @@ import Division from "./Division";
 import ProjectDivision from "./ProjectDivision";
 import ProjectDivisionGrid from "./ProjectDivisionGrid";
 import Footer from "../footer/Footer";
-
+import image1 from "../../assets/Component_images/1.png";
+import image2 from "../../assets/Component_images/2.png";
+import image3 from "../../assets/Component_images/3.png";
+import image4 from "../../assets/Component_images/4.png";
+import image5 from "../../assets/Component_images/5.png";
+import image6 from "../../assets/Component_images/6.png";
+import image7 from "../../assets/Component_images/7.png";
+import image8 from "../../assets/Component_images/8.png";
+import image9 from "../../assets/Component_images/9.png";
+import image10 from "../../assets/Component_images/10.png";
+import image11 from "../../assets/Component_images/11.png";
+// import image9 from "../../assets/Component_images/9.png";
 export default function Components() {
+   const mini_projects = [
+      {
+        id: 1,
+        title: "Portfolio Website",
+        description: "A modern portfolio website built with React and Tailwind.",
+        image:image1  , // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/qEZLEWJ",
+      },
+      {
+        id: 2,
+        title: "Animation Grid",
+        description: "Smooth framer-motion grid animation.",
+        image:  image2, // placeholder image
+     
+        link: "https://codepen.io/Sahil-Saundale/pen/qEZJxPj",
+      },
+      ,
+      {
+        id: 3,
+        title: "Scroll Effects",
+        description: "GSAP scroll animations demo project.",
+        image: image3 , // placeholder image
+      
+        link: "https://codepen.io/Sahil-Saundale/pen/NPNExLy",
+      },
+      {
+        id: 4,
+        title: "Scroll Effects",
+        description: "GSAP scroll animations demo project.",
+        image: image4 , // placeholder image
+      
+        link: "https://codepen.io/Sahil-Saundale/pen/EaKpOgd",
+      },
+      {
+        id: 5,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image5, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/zxqLPNM",
+      },
+      {
+        id: 6,
+        title: "Scroll Effects",
+        description: "GSAP scroll animations demo project.",
+        image:  image6, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/qEZKYGp",
+      },
+      {
+        id: 7,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image7, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/qEZKYGp",
+      },
+      
+      {
+        id: 8,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image8, // placeholder image
+       
+        link: "https://codepen.io/Sahil-Saundale/pen/raepZJK",
+      },
+      
+      {
+        id: 9,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image9, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/EaVrzqW",
+      },
+      
+      {
+        id: 10,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image10, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/xbwdEZp",
+      },
+      
+      {
+        id: 11,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image11, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/gbamBWm",
+      },
+      
+    ];
+
+
   return (
     <div>
       <div className="w-full overflow-hidden relative">
@@ -19,21 +128,42 @@ export default function Components() {
               Experiments
             </h1>
             <h1 className="mt-2 text-2xl tracking-tighter text-balance md:text-2xl lg:text-2xl capitalize text-amber-500">
-              time saving things for developers || things like boiler plate
+              time saving things 
             </h1>
           </div>
           {/* GRID */}
-          <div className="grid md:grid-cols-4 row-auto grid-cols-1 gap-12 w-full !mt-15 section-after">
-            {/* BLOCK 1 */}
-            <div className="w-full   h-80 border-white/10 border-r flex flex-col justify-between">
-              <Division />
-            </div>
-
-            {/* OTHERS */}
-            <div className="w-full   h-80  border-white/10 border-r border-l flex flex-col justify-between relative "></div>
-            <div className="w-full   h-80 border-white/10 border-r border-l flex flex-col justify-between"></div>
-            <div className="w-full   h-80 border-white/10 border-l flex flex-col justify-between"></div>
-          </div>
+      
+            <div className="grid md:grid-cols-4 row-auto grid-cols-1 gap-x-12 w-full  !mt-10 has-before-line">
+                    {/* BLOCK 1 */}
+                    {
+                       
+                    mini_projects.map((project
+                    ) => {
+                      const isEven = mini_projects.id % 4 === 0;
+                      return (
+                        <div
+                          key={project.id}
+                          className={`w-full  border-white/10 border-r border-l  flex ${isEven ? "has-before-line" : "" }flex-col justify-between`}
+                        >
+                          <Division 
+                             codepen={project.link}
+                github={null}
+                liveLink={null}
+                imageLink={project.image}
+                          />
+                              
+                         
+                        </div>
+                      );
+                    })}
+                    {
+                      <div className="w-full border-white/10 border-r border-l  md:h-[70vh] flex items-center justify-center">
+                {/* You can leave it empty or add placeholder text */}
+                {/* <span className="text-white/20 text-4xl">Coming Soon</span> */}
+              </div>
+                    }
+                  </div>
+        
 
             
 

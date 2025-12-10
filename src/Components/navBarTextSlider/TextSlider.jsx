@@ -1,66 +1,66 @@
-import { Component, createRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import react from "react";
-class TextSlider extends Component {
-  constructor(props) {
-    super(props);
-    this.textRef = createRef();
-    this.index = 0;
 
-    // Default text list (can be passed as props)
-    this.texts = props.texts || [
-      "Hello World",
-      "GSAP Animation",
-      "Smooth Motion",
-      "Infinity Loop",
-      "Text Motion"
-    ];
-  }
+export default function TextSlider() {
+  const listRef = useRef(null);
+  const height = 50;
+  let index = 0;
 
-  componentDidMount() {
-    this.animate();
-  }
+  useEffect(() => {
+    const list = listRef.current;
 
-  animate() {
-    const el = this.textRef.current;
-    el.style.opacity = 0;
-    el.style.transform = "translateY(40px)";
+    function slideNext() {
+      index++;
 
-    el.textContent = this.texts[this.index % this.texts.length];
+      gsap.to(list, {
+        y: -index * height,
+        duration: 0.6,
+        ease: "power3.inOut",
+        onComplete: () => {
+          if (index === list.children.length - 1) {
+            const first = list.children[0];
+            list.appendChild(first);
 
-    // Enter animation
-    gsap.to(el, {
-      opacity: 1,
-      y: -40,
-      duration: 1,
-      ease: "power2.out"
-    });
+            gsap.set(list, { y: -(index - 1) * height });
 
-    // Leave after 3 seconds
-    gsap.to(el, {
-      opacity: 0,
-      duration: 1,
-      delay: 3,
-      onComplete: () => {
-        this.index++;
-        this.animate(); // loop again
-      }
-    });
-  }
+            index--;
+          }
+        }
+      });
 
-  render() {
-    const style = {
-      position: "absolute",
-      fontSize: "40px",
-      color: "white",
-      whiteSpace: "nowrap",
-      left: "50%",
-      top: "50%",
-      transform: "translate(-50%, -50%)",
-    };
+      gsap.delayedCall(1.4, slideNext);
+    }
 
-    return <div ref={this.textRef} style={style}></div>;
-  }
+    slideNext();
+  }, []);
+
+  return (
+    <div
+      style={{
+        height: "50px",
+        overflow: "hidden",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#111",
+      }}
+    >
+      <div
+        ref={listRef}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          fontSize: "40px",
+          color: "white",
+          fontFamily: "Arial",
+        }}
+      >
+        <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "center" }}>Text One</div>
+        <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "center" }}>Text Two</div>
+        <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "center" }}>Text Three</div>
+        <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "center" }}>Text Four</div>
+        <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "center" }}>Text Five</div>
+      </div>
+    </div>
+  );
 }
-
-export default TextSlider;

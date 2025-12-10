@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
 import ConnectButton from "./ConnectButton";
 import { motion, AnimatePresence, easeIn } from "framer-motion";
+import TextSlider from "../navBarTextSlider/TextSlider";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -33,11 +34,12 @@ const NavBar = () => {
       <div className="w-full h-[8vh] fixed top-0 z-20 border-b border-white/10 flex items-center justify-center capitalize bg-zinc-950">
         <div className="md:w-[52%] w-full h-full flex justify-between ">
           <div className="w-full h-full relative text-white px-[2.5vw] flex items-center justify-between">
-            {/* <TextSlider /> */}
+           
             <h1 className="md:text-3xl w-full h-full text-sm leading-none tracking-tight flex items-center justify-start">
               Sahil Saundale
             </h1>
-          </div>
+            
+            </div>
           <div className="w-full h-full hidden md:flex items-center justify-end text-white ">
             <div className="md:w-10 w-5 h-10 flex items-center justify-center relative">
               ||श्री||

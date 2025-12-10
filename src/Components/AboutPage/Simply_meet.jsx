@@ -13,7 +13,8 @@ const Simply_meet = () => {
               simplicity meets precision.
             </h1>
             <p className="text-sm w-[50%] text-white/50 tracking-wider ">
-              I skipped the name as the headline__No bios. No fluff. Just <span className="underline ">the portfolio.</span>
+              I skipped the name as the headline__No bios. No fluff. Just{" "}
+              <span className="underline ">the portfolio.</span>
             </p>
             {/* <p className="text-sm text-white/50 tracking-wider ">
               {" "}
@@ -58,6 +59,20 @@ const Simply_meet = () => {
                   <button
                     type="button"
                     class="absolute right-1.5 rounded-full bg-zinc-900 px-4 py-1.5 text-sm font-medium text-white hover:bg-zinc-800 transition"
+                    onClick={() => {
+                      const userEmail = document.getElementById("email").value;
+
+                      const myEmail = "sahilsaundale@gmail.com";
+
+                      const subject = encodeURIComponent(
+                        "New Connection Request"
+                      );
+                      const body = encodeURIComponent(
+                        `Hello,\n\nI want to connect with you.\n\nMy email: ${userEmail}\n`
+                      );
+
+                      window.location.href = `mailto:${myEmail}?subject=${subject}&body=${body}`;
+                    }}
                   >
                     Connect
                   </button>
