@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState,useEffect } from "react"
-import { motion, AnimatePresence, circOut } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import linkedIn from "../../assets/Link.svg"
 import x from "../../assets/x-white.svg"
 import github from "../../assets/github_dark.svg"

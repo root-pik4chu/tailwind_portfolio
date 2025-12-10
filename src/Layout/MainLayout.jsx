@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "../Components/NavBar/NavBar";
 import Footer from "../Components/footer/Footer";
-import { ReactLenis, useLenis } from "lenis/react";
+import { ReactLenis } from "lenis/react";
 import { AnimatePresence, motion } from "framer-motion";
 import DrawingCursor from "../Components/HoverPen/DrawingCursor";
+
 export default function MainLayout() {
   const location = useLocation();
-  const isHome = location.pathname === "/";
+  // const isHome = location.pathname === "/";
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[location.pathname])
+
   return (
     <div>
       <ReactLenis

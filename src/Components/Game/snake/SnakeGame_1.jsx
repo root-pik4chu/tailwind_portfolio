@@ -264,7 +264,7 @@ export default function SnakeGame_1() {
       </div>
 
       <p style={{ marginTop: 12, opacity: 0.8, fontSize: 13 }}>
-        Snake — avoid the L, T, I, _ , - obstacles!
+        Snake —play- A,S,W,D & avoid the L, T, I, _ , - obstacles!
       </p>
     </div>
   );
