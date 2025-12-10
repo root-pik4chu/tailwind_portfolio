@@ -62,7 +62,7 @@ export default function ConnectButton() {
                   <p>linkedIn</p>
                 </div>
                 </a>
-                <a href="https://google.com">
+                <a href="https://x.com/sahil_saundale">
                   <div className="w-[2vw] h-[2vw] flex flex-col items-center justify-center gap-2">
                  
                     <img src={x} alt="" />

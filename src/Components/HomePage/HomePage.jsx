@@ -11,6 +11,7 @@ import WhatIDo from "../AboutPage/WhatIDo";
 import SnakeGame_1 from "../Game/snake/SnakeGame_1";
 import TechStack from "../AboutPage/TechStack";
 import LeetCodeGraph from "../leetcodeGraph/LeetCodeGraph";
+import Testimonials from "../AboutPage/Testimonials";
 // import useAnimatedFavicon from '../../hooks/useAnimatedFavicon';
 export default function HomePage() {
   return (
@@ -50,6 +51,8 @@ export default function HomePage() {
                 {/* new divisio  */}
 
                 <WhatIDo />
+                {/* new division */}
+                <Testimonials />
                 {/* <LeetCodeGraph /> */}
                 {/* new divisio  */}
                 <div className="text-white"></div>
