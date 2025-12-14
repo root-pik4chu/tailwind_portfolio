@@ -4,6 +4,7 @@ import ButtonComponent from "./ButtonComponent";
 import ConnectButton from "./ConnectButton";
 import { motion, AnimatePresence, easeIn } from "framer-motion";
 import TextSlider from "../navBarTextSlider/TextSlider";
+import { playClickSound } from "../../utils/sound/sound";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -50,10 +51,10 @@ const NavBar = () => {
         {/* Desktop Nav */}
         <div className="w-[48%] h-full hidden md:flex items-center justify-between gap-6 text-white ">
           <div className="w-[80%] h-full md:flex items-center justify-end gap-4 text-white text-sm">
-            <Link to="/">Home</Link>
-            <Link to="/Components">Components</Link>
-            <Link to="/More_Projects">more_Projects</Link>
-            <a href={codepenUrl}>Codepen</a>
+            <Link to="/" onClick={playClickSound}>Home</Link>
+            <Link to="/Components" onClick={playClickSound}>Components</Link>
+            <Link to="/More_Projects" onClick={playClickSound}>more_Projects</Link>
+            <a href={codepenUrl} onClick={playClickSound}>Codepen</a>
             <div><ConnectButton /></div>
           </div>
 
