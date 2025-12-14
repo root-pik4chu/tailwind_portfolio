@@ -7,7 +7,7 @@ export default function Division({codepen,github,liveLink,imageLink}) {
          <div className="w-full h-full  px-2">
             <div className="w-full h-[60%] relative py-2 ">
                <div className="w-full h-full relative rounded-md overflow-hidden">
-                  <img className='w-full h-full object-cover  ' src={imageLink} alt="" />
+                  <img loading='lazy' className='w-full h-full object-cover  ' src={imageLink} alt="" />
                </div>
             </div>
             <div className="w-full h-20% flex gap-2 py-2 has-before-line">
