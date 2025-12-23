@@ -17,6 +17,7 @@ import image8 from "../../assets/Component_images/8.png";
 import image9 from "../../assets/Component_images/9.png";
 import image10 from "../../assets/Component_images/10.png";
 import image11 from "../../assets/Component_images/11.png";
+import image12 from "../../assets/Component_images/12.png";
 // import image9 from "../../assets/Component_images/9.png";
 export default function Components() {
    const mini_projects = [
@@ -113,6 +114,14 @@ export default function Components() {
         
         link: "https://codepen.io/Sahil-Saundale/pen/gbamBWm",
       },
+      {
+        id: 12,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image12, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/pen/MYegNWV",
+      },
       
     ];
 
@@ -137,7 +146,7 @@ export default function Components() {
                     {/* BLOCK 1 */}
                     {
                        
-                    mini_projects.map((project
+                    mini_projects.reverse().map((project
                     ) => {
                       const isEven = mini_projects.id % 4 === 0;
                       return (
@@ -157,10 +166,10 @@ export default function Components() {
                       );
                     })}
                     {
-                      <div className="w-full border-white/10 border-r border-l  md:h-[70vh] flex items-center justify-center">
-                {/* You can leave it empty or add placeholder text */}
-                {/* <span className="text-white/20 text-4xl">Coming Soon</span> */}
-              </div>
+              //         <div className="w-full border-white/10 border-r border-l  md:h-[70vh] flex items-center justify-center">
+              //   {/* You can leave it empty or add placeholder text */}
+              //   {/* <span className="text-white/20 text-4xl">Coming Soon</span> */}
+              // </div>
                     }
                   </div>
         
