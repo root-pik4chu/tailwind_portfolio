@@ -18,6 +18,7 @@ import image9 from "../../assets/Component_images/9.png";
 import image10 from "../../assets/Component_images/10.png";
 import image11 from "../../assets/Component_images/11.png";
 import image12 from "../../assets/Component_images/12.png";
+import image13 from "../../assets/Component_images/13.png";
 // import image9 from "../../assets/Component_images/9.png";
 export default function Components() {
    const mini_projects = [
@@ -122,6 +123,14 @@ export default function Components() {
         
         link: "https://codepen.io/Sahil-Saundale/pen/MYegNWV",
       },
+      {
+        id: 13,
+        title: "Creative UI",
+        description: "Unique UI concepts using HTML/CSS/JS.",
+        image: image13, // placeholder image
+        
+        link: "https://codepen.io/Sahil-Saundale/full/EayayRb",
+      }
       
     ];
 
