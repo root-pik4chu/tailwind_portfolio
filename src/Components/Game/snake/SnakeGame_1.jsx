@@ -4,9 +4,9 @@ export default function SnakeGame_1() {
   const canvasRef = useRef(null);
   const [running, setRunning] = useState(false);
   const [score, setScore] = useState(0);
-
+   const isMobile = window.innerWidth < 768;
   // Base grid size (logical)
-  const baseRows = 10;
+  const baseRows = isMobile ? 30 : 20;
   const baseCols = 40;
 
   const snakeRef = useRef([{ x: Math.floor(baseCols / 2), y: Math.floor(baseRows / 2) }]);
@@ -16,18 +16,18 @@ export default function SnakeGame_1() {
   const intervalRef = useRef(null);
 
   const [cellSize, setCellSize] = useState(10);
-  const isMobile = window.innerWidth < 768;
+ 
   // Responsive resize
   useEffect(() => {
     function handleResize() {
-  const isMobile = window.innerWidth < 768;
+  
 
   const w = isMobile
     ? window.innerWidth * 0.95   // almost full width on mobile
     : window.innerWidth * 0.57;  // same desktop behavior
 
   const h = isMobile
-    ? window.innerHeight * 0.65  // taller game area on mobile
+    ? window.innerHeight * 0.35  // taller game area on mobile
     : window.innerHeight * 0.9;
 
   const newCell = Math.floor(Math.min(w / baseCols, h / baseRows));
