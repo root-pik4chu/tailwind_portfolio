@@ -26,7 +26,7 @@ export default function ConnectButton() {
 
       {/* Trigger */}
       <div 
-        className="cursor-pointer text-white"
+        className="cursor-pointer text-white capitalize"
         onClick={() => setOpen(!open)}
       >
         connect

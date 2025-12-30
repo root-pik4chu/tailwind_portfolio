@@ -14,10 +14,11 @@ const NavBar = () => {
   const codepenUrl = "https://codepen.io/Sahil-Saundale";
 
  const item = (delay) => ({
-  initial: { x: 30 },
+  initial: { x: 10 , y: "100%" },
   animate: { 
  
-    x: 0, 
+    x: 0,
+    y: 0, 
     transition: { 
       duration: 0.6, 
       delay,
@@ -52,8 +53,8 @@ const NavBar = () => {
         <div className="w-[48%] h-full hidden md:flex items-center justify-between gap-6 text-white ">
           <div className="w-[80%] h-full md:flex items-center justify-end gap-4 text-white text-sm">
             <Link to="/" onClick={playClickSound}>Home</Link>
-            <Link to="/Components" onClick={playClickSound}>Components</Link>
-            <Link to="/More_Projects" onClick={playClickSound}>more_Projects</Link>
+            <Link to="/Components" onClick={playClickSound}>Experiments</Link>
+            <Link to="/More_Projects" onClick={playClickSound}>Projects</Link>
             <a href={codepenUrl} onClick={playClickSound}>Codepen</a>
             <div><ConnectButton /></div>
           </div>
@@ -95,27 +96,42 @@ const NavBar = () => {
       animate={{ x: "0%" }}
       exit={{ x: "100%"}}
       transition={{  duration: 0.9 ,ease: [0.84 , 0 , 0.28 , 1]}}
-      className="fixed top-[8vh] right-0 h-[92vh] w-[70vw] bg-zinc-950 text-white z-30 p-2 py-[10vh] flex flex-col gap-4 text-2xl"
+      className="fixed top-[8vh] right-0 h-[92vh] w-[70vw] bg-zinc-950 text-white z-30 p-2 py-[10vh] flex flex-col text-5xl md:hidden"
     >
-     <motion.div {...item(0.15)}>
-
-
+     <div className="w-full h-fit overflow-hidden">
+      <motion.div {...item(0.15)}>
           <Link onClick={() => setOpen(false)} to="/">Home</Link>
      </motion.div>
-       
-      <motion.div {...item(0.25)}>
-        <Link onClick={() => setOpen(false)} to="/Components">Components</Link>
+     </div>
+       <div className="w-full h-fit overflow-hidden">
+         <motion.div {...item(0.25)}>
+        <Link onClick={() => setOpen(false)} to="/Components">Experiments</Link>
       </motion.div>
-      <motion.div {...item(0.30)}>
-        <Link onClick={() => setOpen(false)} to="/More_Projects">more_Projects</Link>
+       </div>
+       <div className="w-full h-fit overflow-hidden">
+         <motion.div {...item(0.30)}>
+        <Link onClick={() => setOpen(false)} to="/More_Projects">Projects</Link>
       </motion.div>
-      <motion.div {...item(0.35)}>
+       </div>
+       <div className="w-full h-fit overflow-hidden">
+        <motion.div {...item(0.35)}>
 
 
       <a onClick={() => setOpen(false)} href={codepenUrl}>Codepen</a>
       </motion.div>
+       </div>
+       <div className="w-full h-fit overflow-hidden">
+        <motion.div {...item(0.40)}>
+
 
       <div className=""><ConnectButton /></div>
+</motion.div>
+       </div>
+
+     
+     
+      
+
 
       <a
         href={driveUrl}
