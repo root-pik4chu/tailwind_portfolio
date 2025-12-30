@@ -16,15 +16,23 @@ export default function SnakeGame_1() {
   const intervalRef = useRef(null);
 
   const [cellSize, setCellSize] = useState(10);
-
+  const isMobile = window.innerWidth < 768;
   // Responsive resize
   useEffect(() => {
     function handleResize() {
-      const w = window.innerWidth * 0.57;
-      const h = window.innerHeight * 0.9;
-      const newCell = Math.floor(Math.min(w / baseCols, h / baseRows));
-      setCellSize(newCell);
-    }
+  const isMobile = window.innerWidth < 768;
+
+  const w = isMobile
+    ? window.innerWidth * 0.95   // almost full width on mobile
+    : window.innerWidth * 0.57;  // same desktop behavior
+
+  const h = isMobile
+    ? window.innerHeight * 0.65  // taller game area on mobile
+    : window.innerHeight * 0.9;
+
+  const newCell = Math.floor(Math.min(w / baseCols, h / baseRows));
+  setCellSize(newCell);
+}
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -216,9 +224,25 @@ export default function SnakeGame_1() {
       ctx.fillText("Game Over — press Start", width / 2, height / 2);
     }
   }
-
+  function moveDir(next) {
+  const d = dirRef.current;
+  if (next === "up" && d.y !== 1) dirRef.current = { x: 0, y: -1 };
+  if (next === "down" && d.y !== -1) dirRef.current = { x: 0, y: 1 };
+  if (next === "left" && d.x !== 1) dirRef.current = { x: -1, y: 0 };
+  if (next === "right" && d.x !== -1) dirRef.current = { x: 1, y: 0 };
+}
   useEffect(() => draw(), [score, running, cellSize]);
-
+  const btnStyle = {
+  height: 48,
+  width: 48,
+  borderRadius: 10,
+  border: "none",
+  background: "#212529",
+  color: "#fff",
+  fontSize: 18,
+  fontWeight: 600,
+  cursor: "pointer",
+};
   return (
     <div
       style={{
@@ -262,10 +286,34 @@ export default function SnakeGame_1() {
       <div style={{ margin: "0 auto", width, height, position: "relative" }}>
         <canvas ref={canvasRef} style={{ display: "block", borderRadius: 8 }} />
       </div>
-
+          
       <p style={{ marginTop: 12, opacity: 0.8, fontSize: 13 }}>
         Snake —play- A,S,W,D & avoid the L, T, I, _ , - obstacles!
       </p>
+      
+        {isMobile && (
+  <div
+    style={{
+      marginTop: 14,
+      display: "grid",
+      gridTemplateColumns: "60px 60px 60px",
+      gap: 8,
+      justifyContent: "center",
+      userSelect: "none",
+    }}
+  >
+    <div />
+    <button onClick={() => moveDir("up")} style={btnStyle}>▲</button>
+    <div />
+
+    <button onClick={() => moveDir("left")} style={btnStyle}>◀</button>
+    <button onClick={() => moveDir("down")} style={btnStyle}>▼</button>
+    <button onClick={() => moveDir("right")} style={btnStyle}>▶</button>
+  </div>
+)}
+
+      
+      
     </div>
   );
 }
