@@ -43,14 +43,40 @@ export default function HomePage() {
                 <Simply_meet />
                 {/* new division */}
                 <Experience />
+                {/* new divisio  */}
+
+                <WhatIDo />
+                {/* <div>
+      <div className="text section-after text-white p-2 ">
+        <p className=" tracking-widest uppercase text-pretty text-fuchsia-500 text-sm font-[ibm] font-semibold">
+          Experience
+        </p>
+        <h1 className="max-w-lg text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
+          My Professional Journey
+        </h1>
+        <p className="text-xl leading-relaxed text-white/50 pt-5">
+          Experience that helped me evolve as a frontend developer — learning,
+          building, and improving with every project.
+        </p>
+      </div>
+      <div className="w-full md:h-[30vh] h-full relative ">
+        * CARDS EXPERIENCE SECTION  
+        <div className="w-full h-full relative  !mt-10 ">
+          <section class="w-full h-full max-w-5xl   mx-auto relative section-after ">
+             <!-- 2x2 Grid with Shared Borders --> 
+            <div class="w-full h-full grid grid-cols-1 sm:grid-cols-2 border   overflow-hidden ">
+              
+            </div>
+          </section>
+        </div>
+      </div>
+    </div> */}
                 {/* new division */}
                 <TechStack />
                 {/* new divisio  */}
                 <ProjectSection />
 
-                {/* new divisio  */}
-
-                <WhatIDo />
+                
                 {/* new division */}
                 <Testimonials />
                 {/* <LeetCodeGraph /> */}

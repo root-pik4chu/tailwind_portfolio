@@ -4,35 +4,35 @@ export default function SnakeGame_1() {
   const canvasRef = useRef(null);
   const [running, setRunning] = useState(false);
   const [score, setScore] = useState(0);
-   const isMobile = window.innerWidth < 768;
+  const isMobile = window.innerWidth < 768;
   // Base grid size (logical)
   const baseRows = isMobile ? 30 : 20;
   const baseCols = 40;
 
-  const snakeRef = useRef([{ x: Math.floor(baseCols / 2), y: Math.floor(baseRows / 2) }]);
+  const snakeRef = useRef([
+    { x: Math.floor(baseCols / 2), y: Math.floor(baseRows / 2) },
+  ]);
   const dirRef = useRef({ x: 1, y: 0 });
   const foodRef = useRef(null);
   const obstaclesRef = useRef([]);
   const intervalRef = useRef(null);
 
   const [cellSize, setCellSize] = useState(10);
- 
+
   // Responsive resize
   useEffect(() => {
     function handleResize() {
-  
+      const w = isMobile
+        ? window.innerWidth * 0.95 // almost full width on mobile
+        : window.innerWidth * 0.57; // same desktop behavior
 
-  const w = isMobile
-    ? window.innerWidth * 0.95   // almost full width on mobile
-    : window.innerWidth * 0.57;  // same desktop behavior
+      const h = isMobile
+        ? window.innerHeight * 0.35 // taller game area on mobile
+        : window.innerHeight * 0.9;
 
-  const h = isMobile
-    ? window.innerHeight * 0.35  // taller game area on mobile
-    : window.innerHeight * 0.9;
-
-  const newCell = Math.floor(Math.min(w / baseCols, h / baseRows));
-  setCellSize(newCell);
-}
+      const newCell = Math.floor(Math.min(w / baseCols, h / baseRows));
+      setCellSize(newCell);
+    }
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -59,11 +59,31 @@ export default function SnakeGame_1() {
 
   function generateObstacles() {
     const shapes = [
-      [{ x: 0, y: 0 }, { x: 0, y: 1 }, { x: 1, y: 1 }], // L
-      [{ x: 1, y: 0 }, { x: 0, y: 1 }, { x: 1, y: 1 }, { x: 2, y: 1 }], // T
-      [{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 2, y: 0 }, { x: 3, y: 0 }], // I
-      [{ x: 0, y: 0 }, { x: 1, y: 0 }], // _
-      [{ x: 0, y: 0 }, { x: 0, y: 1 }], // -
+      [
+        { x: 0, y: 0 },
+        { x: 0, y: 1 },
+        { x: 1, y: 1 },
+      ], // L
+      [
+        { x: 1, y: 0 },
+        { x: 0, y: 1 },
+        { x: 1, y: 1 },
+        { x: 2, y: 1 },
+      ], // T
+      [
+        { x: 0, y: 0 },
+        { x: 1, y: 0 },
+        { x: 2, y: 0 },
+        { x: 3, y: 0 },
+      ], // I
+      [
+        { x: 0, y: 0 },
+        { x: 1, y: 0 },
+      ], // _
+      [
+        { x: 0, y: 0 },
+        { x: 0, y: 1 },
+      ], // -
     ];
 
     const obs = [];
@@ -81,7 +101,9 @@ export default function SnakeGame_1() {
   }
 
   function reset() {
-    const snake = [{ x: Math.floor(baseCols / 2), y: Math.floor(baseRows / 2) }];
+    const snake = [
+      { x: Math.floor(baseCols / 2), y: Math.floor(baseRows / 2) },
+    ];
     const obstacles = generateObstacles();
     const food = placeFood(snake, obstacles);
     snakeRef.current = snake;
@@ -138,8 +160,10 @@ export default function SnakeGame_1() {
 
     const obstacles = obstaclesRef.current;
 
-    for (let s of snake) if (s.x === head.x && s.y === head.y) return gameOver();
-    for (let o of obstacles) if (o.x === head.x && o.y === head.y) return gameOver();
+    for (let s of snake)
+      if (s.x === head.x && s.y === head.y) return gameOver();
+    for (let o of obstacles)
+      if (o.x === head.x && o.y === head.y) return gameOver();
 
     snake.unshift(head);
     const food = foodRef.current;
@@ -193,7 +217,12 @@ export default function SnakeGame_1() {
     const obstacles = obstaclesRef.current;
     ctx.fillStyle = "#303030";
     obstacles.forEach((o) => {
-      ctx.fillRect(o.x * cellSize + 1, o.y * cellSize + 1, cellSize - 2, cellSize - 2);
+      ctx.fillRect(
+        o.x * cellSize + 1,
+        o.y * cellSize + 1,
+        cellSize - 2,
+        cellSize - 2
+      );
     });
 
     // Food
@@ -225,28 +254,28 @@ export default function SnakeGame_1() {
     }
   }
   function moveDir(next) {
-  const d = dirRef.current;
-  if (next === "up" && d.y !== 1) dirRef.current = { x: 0, y: -1 };
-  if (next === "down" && d.y !== -1) dirRef.current = { x: 0, y: 1 };
-  if (next === "left" && d.x !== 1) dirRef.current = { x: -1, y: 0 };
-  if (next === "right" && d.x !== -1) dirRef.current = { x: 1, y: 0 };
-}
+    const d = dirRef.current;
+    if (next === "up" && d.y !== 1) dirRef.current = { x: 0, y: -1 };
+    if (next === "down" && d.y !== -1) dirRef.current = { x: 0, y: 1 };
+    if (next === "left" && d.x !== 1) dirRef.current = { x: -1, y: 0 };
+    if (next === "right" && d.x !== -1) dirRef.current = { x: 1, y: 0 };
+  }
   useEffect(() => draw(), [score, running, cellSize]);
   const btnStyle = {
-  height: 48,
-  width: 48,
-  borderRadius: 10,
-  border: "none",
-  background: "#212529",
-  color: "#fff",
-  fontSize: 18,
-  fontWeight: 600,
-  cursor: "pointer",
-};
+    height: 48,
+    width: 48,
+    borderRadius: 10,
+    border: "none",
+    background: "#212529",
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: 600,
+    cursor: "pointer",
+  };
   return (
     <div
       style={{
-      //   fontFamily: "system-ui, sans-serif",
+        //   fontFamily: "system-ui, sans-serif",
         color: "#e6eef0",
         padding: 10,
         textAlign: "center",
@@ -286,34 +315,39 @@ export default function SnakeGame_1() {
       <div style={{ margin: "0 auto", width, height, position: "relative" }}>
         <canvas ref={canvasRef} style={{ display: "block", borderRadius: 8 }} />
       </div>
-          
+
       <p style={{ marginTop: 12, opacity: 0.8, fontSize: 13 }}>
         Snake —play- A,S,W,D & avoid the L, T, I, _ , - obstacles!
       </p>
-      
-        {isMobile && (
-  <div
-    style={{
-      marginTop: 14,
-      display: "grid",
-      gridTemplateColumns: "60px 60px 60px",
-      gap: 8,
-      justifyContent: "center",
-      userSelect: "none",
-    }}
-  >
-    <div />
-    <button onClick={() => moveDir("up")} style={btnStyle}>▲</button>
-    <div />
 
-    <button onClick={() => moveDir("left")} style={btnStyle}>◀</button>
-    <button onClick={() => moveDir("down")} style={btnStyle}>▼</button>
-    <button onClick={() => moveDir("right")} style={btnStyle}>▶</button>
-  </div>
-)}
+      {isMobile && (
+        <div
+          style={{
+            marginTop: 14,
+            display: "grid",
+            gridTemplateColumns: "60px 60px 60px",
+            gap: 8,
+            justifyContent: "center",
+            userSelect: "none",
+          }}
+        >
+          <div />
+          <button onClick={() => moveDir("up")} style={btnStyle}>
+            ▲
+          </button>
+          <div />
 
-      
-      
+          <button onClick={() => moveDir("left")} style={btnStyle}>
+            ◀
+          </button>
+          <button onClick={() => moveDir("down")} style={btnStyle}>
+            ▼
+          </button>
+          <button onClick={() => moveDir("right")} style={btnStyle}>
+            ▶
+          </button>
+        </div>
+      )}
     </div>
   );
 }
